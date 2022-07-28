@@ -1,4 +1,4 @@
-﻿___TERMS_OF_SERVICE___
+___TERMS_OF_SERVICE___
 
 By creating or modifying this file you agree to Google Tag Manager's Community
 Template Gallery Developer Terms of Service available at
@@ -150,7 +150,7 @@ ___TEMPLATE_PARAMETERS___
           {
             "type": "SIMPLE_TABLE",
             "name": "addEventParams",
-            "displayName": "Add Additional Event Parameters",
+            "displayName": "",
             "simpleTableColumns": [
               {
                 "defaultValue": "",
@@ -455,5 +455,4 @@ scenarios: []
 ___NOTES___
 
 Created on 28.7.2022, 18:05:10
-
 
