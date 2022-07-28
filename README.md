@@ -1,4 +1,4 @@
-# ga4mp-tag-server
+# GA4 Measurement Protocol Tag (ga4mp-tag-server)
 send events via GA4 Measurement Protocol (Custom Tag Template for Server-Side Google Tag Manager)
 
 ## using the tag
