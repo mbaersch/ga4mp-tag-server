@@ -39,19 +39,20 @@ ___TEMPLATE_PARAMETERS___
       {
         "type": "NON_EMPTY"
       }
-    ]
+    ],
+    "help": "Paste the Measurement ID from your GA4 Data Stream here"
   },
   {
     "type": "TEXT",
     "name": "apiSecret",
     "displayName": "API Secret",
     "simpleValueType": true,
-    "alwaysInSummary": true,
     "valueValidators": [
       {
         "type": "NON_EMPTY"
       }
-    ]
+    ],
+    "help": "Create a Measurement Protocol API secret in your Data Stream settings and paste secret here"
   },
   {
     "type": "TEXT",
@@ -63,13 +64,16 @@ ___TEMPLATE_PARAMETERS___
       {
         "type": "NON_EMPTY"
       }
-    ]
+    ],
+    "help": "Enter a fixed ID or use request / event data to create a common ID for all hits from the same session"
   },
   {
     "type": "CHECKBOX",
     "name": "clientIdOverride",
     "checkboxText": "Override Client ID",
-    "simpleValueType": true
+    "simpleValueType": true,
+    "help": "The tag uses the client_id parameter from incoming events by default. Optionally use an alternative ID",
+    "alwaysInSummary": true
   },
   {
     "type": "TEXT",
@@ -98,9 +102,10 @@ ___TEMPLATE_PARAMETERS___
       {
         "type": "CHECKBOX",
         "name": "addAllSetParams",
-        "checkboxText": "Send Parameters From Incoming Event",
+        "checkboxText": "Forward Event Parameters",
         "simpleValueType": true,
-        "defaultValue": true
+        "defaultValue": true,
+        "help": "All non-vendor-specific event parameters can be added to outgoing requests"
       },
       {
         "type": "CHECKBOX",
@@ -113,7 +118,8 @@ ___TEMPLATE_PARAMETERS___
             "paramValue": true,
             "type": "EQUALS"
           }
-        ]
+        ],
+        "help": "List all event parameter keys that shoud not be included in outgoing requests"
       },
       {
         "type": "SIMPLE_TABLE",
@@ -160,7 +166,8 @@ ___TEMPLATE_PARAMETERS___
               }
             ]
           }
-        ]
+        ],
+        "help": "Add or modify event parameters by providing parameter names (keys) and values"
       }
     ]
   },
@@ -173,9 +180,10 @@ ___TEMPLATE_PARAMETERS___
       {
         "type": "CHECKBOX",
         "name": "addAllSetUserProps",
-        "checkboxText": "Send User Properties From Incoming Event",
+        "checkboxText": "Forward User Properties",
         "simpleValueType": true,
-        "defaultValue": true
+        "defaultValue": true,
+        "help": "All existing GA4 user properties can be added to outgoing requests"
       },
       {
         "type": "CHECKBOX",
@@ -188,7 +196,8 @@ ___TEMPLATE_PARAMETERS___
             "paramValue": true,
             "type": "EQUALS"
           }
-        ]
+        ],
+        "help": "Define a list of user property names that shoud be removed from outgoing requests"
       },
       {
         "type": "SIMPLE_TABLE",
@@ -235,7 +244,8 @@ ___TEMPLATE_PARAMETERS___
               }
             ]
           }
-        ]
+        ],
+        "help": "Add new or modify existing user properties to be included in outgoing requests"
       }
     ]
   }
@@ -445,3 +455,5 @@ scenarios: []
 ___NOTES___
 
 Created on 28.7.2022, 18:05:10
+
+
