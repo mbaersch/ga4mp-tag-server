@@ -1,5 +1,5 @@
 homepage: "https://www.markus-baersch.de"
 documentation: "https://github.com/mbaersch/ga4mp-tag-server/#readme"
 versions:
-  - sha: fb4a282ddf59cea9de3b148fc4998121f8180ef5
+  - sha: 4961a2f8d62a39d4fa044b4a930ad388d76e7935
     changeNotes: initial release.
