@@ -1,0 +1,4 @@
+homepage: "https://www.markus-baersch.de"
+versions:
+  - sha: 8a53df12dd969de047dfdcb4d8dad9c6e6bd2ad7
+    changeNotes: initial release.
