@@ -15,8 +15,8 @@ ___INFO___
   "securityGroups": [],
   "displayName": "GA4 Measurement Protocol Tag",
   "brand": {
-    "id": "brand_dummy",
-    "displayName": "",
+    "id": "mbaersch",
+    "displayName": "mbaersch",
     "thumbnail": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QAwABKANIFhuhKAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAB3RJTUUH5gccEDAuu5D+RAAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAGWSURBVFjD7de9axRBGMfxz63KnYrBxnRbiZjC2hcUxEoxpBCSJinsVLAyzF+h6wsK2qUREXKlFomFqBC1CQiitTCWNnJanIprsydH3FuieHsi91TD8zzzzPf5zewMy4itMczi3bbDWMAE1vKGpdasb7UAdNvO4Q6SPveqhpnmrK89RzKkxSdxraT+Sbn5fkcyJAGOYOeA2PE6AFoVsR11AGzaxgBjgJEDbP3TiTHYh5miidU087o2BWJwAW9xFVewHoOLtQDEYAo3N6i3DTdisL8OBU4XC5Zt56k6ACYqYrtH/RU0xvfAGOD/uIpjMImD6OBlmunWpkAMzuMdHuAJ3sTgQC0AMTiE29je596Ldgylt99fV2BhwLmYwtFinFfUyzeRUwmwqyK3F+tU5HR+I6cU4OmASZ/xohg/ruiwN/85Pg3IeVYFcA8PN/i+41Ka+QBp5hWulxS+lWbWoTnnIxZLQB/hfuXj8X7RljxxFicKue6m2c/u+w/sGUwXTay0Est7Lv/yi3YM88X2rWGpOeeLf8l+ANFzWUKFTJ07AAAAAElFTkSuQmCC"
   },
   "description": "sends events with selected parameters and properties via GA4 Measurement Protocol",
