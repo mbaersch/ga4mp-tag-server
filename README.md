@@ -1,15 +1,25 @@
 # GA4 Measurement Protocol Tag (ga4mp-tag-server)
-send events via GA4 Measurement Protocol (Custom Tag Template for Server-Side Google Tag Manager)
+Send events via GA4 Measurement Protocol (Custom Tag Template for Server-Side Google Tag Manager)
 
-## using the tag
-add template and create a new tag to forward events from any source format to GA4 using the GA4 Measurement Protocol. 
+## Using The Tag
+Add template and create a new tag to forward events from any source format to GA4 using the GA4 Measurement Protocol. All existing parameters (and GA4 and user properties) can be included.     
 
-## setup
-define your GA4 Measurement-Id and API secret from your GA4 data stream settings. Add a constant value or use a variable to populate the session id that should be available in the request (cookie, parameter, payload or a specific event field). 
+## Setup
+Define your GA4 Measurement-Id and API secret from your GA4 data stream settings. 
 
-## options
-you can optionally overwrite the client id (that defaults to the client_id event parameter) with a custom value. 
+### Setting a Session ID
+Add a constant value or use a variable to populate the session id that should be available somwhere in the request (existing session cookie, request parameter, payload or a specific event field) or created server-side. If you use this template to *enhance existing web sessios*, extract the session id from the _ga_xxxxxxxx cookie. 
 
-per default, all existing **event parameters** (except vendor specific fields like x-some_thing or ga_some_thing) will be forwarded as event parameters in the GA4MP request. This option can be deactivated. if active, a set of event parameter keys can be defined that are removed if present in the event. additional new event parameters (or existing ones) can be set to any value. 
+To achive that, you can use a cookie variable to read the value and feed a *Number & String Operations* variable (https://tagmanager.google.com/gallery/#/owners/mbaersch/templates/number-string-operations). Use the string function *split+extract (split, then get item at param 3 index)* to extract the existing session id (a timestamp in seconds). Be aware that the way GA4 stores a session can change any time.     
 
-the same options exist for keeping, adding or manipulating **user properties**. 
+## Options
+You can optionally overwrite the client id (that defaults to the client_id event parameter) with a custom value. 
+
+### Event Parameter Handling
+Per default, all existing **event parameters** (except vendor specific fields like x-some_thing or ga_some_thing) will be forwarded as event parameters in the GA4MP request. This option can be deactivated. If active, a set of event parameter keys can be defined that are removed if present in the event in order to reduce data sent to GA4. Additionally *new event parameters* (or existing ones) can be set to any value. 
+
+### User Properties
+The same options exist for keeping, adding or manipulating **user properties** that are included in incoming requests in GA4 format (only GA4 properties are processed). If you want to use specific event parameters as user properties, extract them as variables from the request, add keys to the ignore list for user properties and use the variables to set user properties instead.   
+
+## Endpoint
+All requests are sent to the standard GA4MP endpoint at https://www.google-analytics.com/mp/. As there is no option to allow any other domain to receive data (as a useful restriction of how templates work) you can not change the destination URL. If needed anyway, patching the template would be necessary (which is not recommended).    
