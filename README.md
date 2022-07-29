@@ -8,9 +8,9 @@ Add template and create a new tag to forward events from any source format to GA
 Define your GA4 Measurement-Id and API secret from your GA4 data stream settings. 
 
 ### Setting a Session ID
-Add a constant value or use a variable to populate the session id that should be available somwhere in the request (existing session cookie, request parameter, payload or a specific event field) or created server-side. If you use this template to *enhance existing web sessios*, extract the session id from the _ga_xxxxxxxx cookie. 
+Add a constant value or use a variable to populate the session id that should be available somwhere in the request (existing session cookie, request parameter, payload or a specific event field) or created server-side. If you use this template to *enhance existing web sessions*, use `ga_session_id` from incoming GA4 events, extracted as event variable. 
 
-To achive that, you can use a cookie variable to read the value and feed a *Number & String Operations* variable (https://tagmanager.google.com/gallery/#/owners/mbaersch/templates/number-string-operations). Use the string function *split+extract (split, then get item at param 3 index)* to extract the existing session id (a timestamp in seconds). Be aware that the way GA4 stores a session can change any time.     
+Note: If requests are not in GA4 format but still a GA4 web session exists and should include the event sent with this tag, you can extract the existing session id from the _ga_xxxxxxxx cookie if the session id is not part of the event parameters. To achive that, you can use a cookie variable to read the value and feed a *Number & String Operations* variable (https://tagmanager.google.com/gallery/#/owners/mbaersch/templates/number-string-operations). Use the string function *split+extract (split, then get item at param 3 index)* to extract the existing session id (a timestamp in seconds). Be aware that the way GA4 stores a session can change any time.   
 
 ## Options
 You can optionally overwrite the client id (that defaults to the client_id event parameter) with a custom value. 
