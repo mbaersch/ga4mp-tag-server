@@ -1,5 +1,13 @@
-# GA4 Measurement Protocol Tag (ga4mp-tag-server)
-Send events via GA4 Measurement Protocol (Custom Tag Template for Server-Side Google Tag Manager)
+# GA4 Measurement Protocol Tag 
+
+**Custom Tag Template for Server-Side Google Tag Manager**
+
+Send events via GA4 Measurement Protocol 
+
+![Template Status](https://img.shields.io/badge/Community%20Template%20Gallery%20Status-submitted-orange) ![Repo Size](https://img.shields.io/github/repo-size/mbaersch/ga4mp-tag-server) ![License](https://img.shields.io/github/license/mbaersch/ga4mp-tag-server)
+
+
+---
 
 ## Using The Tag
 Add template and create a new tag to forward events from any source format to GA4 using the GA4 Measurement Protocol. All existing parameters (and GA4 and user properties) can be included.     
